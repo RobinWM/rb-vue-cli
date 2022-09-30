@@ -4,10 +4,13 @@
   "description": "simple vue cli",
   "main": "index.js",
   "bin": {
-    "rb": "./bin/rb.js"
+    "rb": "./src/rb.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "lint": "eslint --fix --ext .js src",
+    "release": "release-it"
   },
   "author": {
     "name": "Robin",
@@ -24,5 +27,50 @@
     "inquirer": "^8.0.0",
     "ora": "^5.0.0",
     "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@release-it/conventional-changelog": "^5.1.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "release-it": "^15.4.2"
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md",
+      "ignoreRecommendedBump": true,
+      "strictSemVer": true
+    }
+  },
+  "lint-staged": {
+    "*/.{js,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "git": {
+      "commitMessage": "chore(tag): release v${version}"
+    }
+  },
+  "release-it": {
+    "npm": {
+      "publish": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobinWM/rb-vue-cli.git"
   }
 }
