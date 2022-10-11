@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const { program } = require('commander')
 const chalk = require('chalk')
-let figlet = require('figlet')
+const figlet = require('figlet')
 
 // 配置create命令
 program
