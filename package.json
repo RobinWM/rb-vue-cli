@@ -9,7 +9,8 @@
   "scripts": {
     "prepare": "husky install",
     "commit": "git-cz",
-    "lint": "eslint --fix --ext .js src",
+    "lint:eslint": "eslint --fix --ext .js src",
+    "lint:lint-staged": "lint-staged -c ./.husky/lint-staged.config.js",
     "release": "release-it"
   },
   "author": {
