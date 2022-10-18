@@ -11,4 +11,5 @@ module.exports = {
   arrowParens: "always", // (x) => {} 是否要有小括号
   requirePragma: false, // 不需要写文件开头的
   insertPragma: false, // 不需要自动在文件开头插入
+  endOfLine: "auto",
 };
