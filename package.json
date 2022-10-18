@@ -45,14 +45,6 @@
     "prettier": "^2.7.1",
     "release-it": "^15.5.0"
   },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": "angular",
-      "infile": "CHANGELOG.md",
-      "ignoreRecommendedBump": true,
-      "strictSemVer": true
-    }
-  },
   "lint-staged": {
     "*/.{js,json}": [
       "eslint --fix",
@@ -66,11 +58,6 @@
     },
     "git": {
       "commitMessage": "chore(tag): release v${version}"
-    }
-  },
-  "release-it": {
-    "npm": {
-      "publish": true
     }
   },
   "repository": {
