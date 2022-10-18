@@ -10,6 +10,7 @@
     "prepare": "husky install",
     "commit": "git-cz",
     "lint:eslint": "eslint --fix --ext .js src",
+    "lint:ls-lint": "ls-lint",
     "lint:lint-staged": "lint-staged -c ./.husky/lint-staged.config.js",
     "release": "release-it"
   },
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@ls-lint/ls-lint": "^1.11.2",
     "@release-it/conventional-changelog": "^5.1.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
