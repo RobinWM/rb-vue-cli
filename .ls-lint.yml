@@ -1,5 +1,5 @@
 ls:
-  src/**:
+  lib/**:
     .js: kebab-case
     .ts: kebab-case
     .d.ts: kebab-case
